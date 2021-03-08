@@ -94,8 +94,8 @@ li a.active {
 }
 
 img {
-	width: 550px;
-	height: 360px;
+	width: 560px;
+	height: 315px;
 }
 
 img:hover {
@@ -122,4 +122,14 @@ img:hover {
 
 .photo-container:hover .media-text {
 	font-weight: bolder;
+}
+
+.qr-code img {
+	width: 200px;
+	height: 200px;
+	padding: 1%;
+}
+
+.qr-code {
+	font-size: 18px;
 }
