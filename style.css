@@ -4,9 +4,10 @@ body {
 
 #menu
 {
-	background-color: gray;
+	background-color: rgb(247, 242, 242);
 	position: fixed;
 	width: 100%;
+	z-index: 1;
 }
 
 #menu ul{
