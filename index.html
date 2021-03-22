@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="node_modules/emoji-picker-textarea/css/emoji-picker-textarea.css" />
     <link rel="stylesheet" href="C:\Users\NirSteinfeld\Documents\Y3 Semester B\Web Dev\Lab 1 - HTML\assignment1-nir-st\font-awesome-4.7.0\css\font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>E.C.</title>
   </head>
   <body>
     <div id="fb-root"></div>
@@ -62,6 +64,7 @@
     </section>
 
     <section id="photos" class="section">
+      <center>
       <p class="section-header">  
         Photos
       </p>
@@ -104,9 +107,11 @@
         </div>
       <br/>
       <br/>
+    </center>
     </section>
 
     <section id="music" class="section">
+      <center>
       <p class="section-header">
         Music
       </p>
@@ -134,7 +139,7 @@
       <p class="section-header">
         Like
       </p>
-      <p style="text-align: center;font-size: 20px;">
+      <p style="text-align: center;font-size: 28px; font-family: cursive;">
         Make sure to like Eric Clapton's Facebook page!
       </p>
       <br/>
@@ -146,7 +151,7 @@
       <br/>
       <br/>
       <br/>
-      <br/>
+    </center>
     </section>
 
     <section id="qrcoder" class="section">
@@ -167,6 +172,30 @@
       <p class="section-header">
         Q&A
       </p>
+      <center>
+        <p class="qna">
+          Differences Between Web1, Web2 and Web3:
+        </p>
+      <div id="qna">
+      <ul>
+        <li>
+          web1 is "read only" web. Users can recieve information but cannot update or change it.
+        </li>
+        <li>
+          web2 is the dynamic web. Pages interact with users input and users can interact with each other.
+        </li>
+        <li>
+          web3 introduced newer and more advenced technologies such as artificial intelligence, 3D graphics and specific content based on recommendation systems.
+        </li>
+      </ul>
+      </div>
+      </center>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <br/>
       <br/>
       <br/>
@@ -182,16 +211,30 @@
       <br/>
       <br/>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
       <p class="section-header">
         Contact Me
       </p>
+      <div class="container">
+        <center>
+          <form>
+            <p style="font-family: cursive; font-size: 28px;">
+              Send me a message!
+            </p>
+            <br/>
+            <br/>
+            <textarea id="message-content" data-emoji="true" name="subject" placeholder="Message.." style="height:200px"></textarea>
+            <button type="button" id="emoji-picker-area" onclick="toggleEmojiPicker()">Add Emojis</button>
+            <br/>
+            <input type="submit" value="Submit" onclick="sendEmail()">
+          </form>
+        </center>
+      </div>         
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <br/>
       <br/>
       <br/>
@@ -212,4 +255,37 @@
       });​
     </script>
   </body>
+  <script>
+    function sendEmail() {
+      let content = document.getElementById("message-content").value;
+      open('mailto:nirstein@post.bgu.ac.il?subject=Regarding Your Awesome Website&body=' + content)
+    }
+  </script>
+  <script type="text/javascript" src="node_modules/emoji-picker-textarea/index.js"></script>
+  <script>
+    let emojiPicker;
+    let isOpen = false;
+
+    function createEmojiPicker() {
+      // Add a emoji to this textarea.
+      let textarea = document.getElementById("message-content");
+      // Show the picker to this element. The element would be parent of the picker.
+      let picker_area = document.getElementById("emoji-picker-area");
+      // Create the picker by specifying the width and height of it.
+      emojiPicker = new EmojiPicker(textarea, picker_area, "250px", "200px");
+    }
+    createEmojiPicker()
+
+    function toggleEmojiPicker() {
+      if (isOpen) {
+        // Hide the picker.
+        emojiPicker.hide();
+      }
+      else {
+        // Show the picker.
+        emojiPicker.show();
+      }
+      isOpen = !isOpen;
+    }
+  </script>
 </html>

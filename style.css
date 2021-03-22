@@ -132,7 +132,8 @@ img:hover {
 }
 
 .qr-code {
-	font-size: 22px;
+	font-size: 28px;
+	font-family: cursive;
 }
 
 input[type=text], select, textarea {
@@ -170,8 +171,8 @@ input[type=text], select, textarea {
   }
 
   .qna {
-	  color: darkblue;
 	  font-size: 28px;
+	  font-family: cursive;
   }
 
   #qna li {
