@@ -176,16 +176,40 @@ input[type=text], select, textarea {
   }
 
   #qna li {
-	  float: left;
-	  display: block;
+	  display: inline-flex;
 	  width: 25%;
-	  height: 200px;
+	  min-height: 160px;
+	  justify-content: center;
+	  /* align-items: center; */
 	  border-style: double;
 	  border-width: 2px;
 	  border-color: red;
-	  margin: 3%;
+	  margin: 2%;
 	  text-align: center;
 	  font-size: 24px;
 	  padding: 10px;
+	  padding-top: 2%;
 	  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+ 
+  #qna-example li {
+	display: inline-flex;
+	width: 25%;
+	min-height: 160px;
+	justify-content: center;
+	margin: 2%;
+	text-align: center;
+	font-size: 24px;
+	padding: 10px;
+	/* padding-top: 2%; */
+	font-family: cursive;
+}
+
+  #qna li:hover {
+	  background-color:lightgray;
+  }
+
+  .qna-example {
+	font-size: 24px;
+	font-family: cursive;
   }
